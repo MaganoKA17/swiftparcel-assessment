@@ -1,6 +1,6 @@
 package za.co.swiftparcel;
 
-public class EconomyShipment {
+public class EconomyShipment extends Shipment {
 
     public static final double RATE_PER_KG = 9.50;
     private static final int ESTIMATED_DAYS = 5;

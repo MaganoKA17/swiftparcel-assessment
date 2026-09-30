@@ -11,7 +11,7 @@ public class ExpressShipment extends Shipment {
     }
 
     @Override
-    double deliveryFee() {
+    public double deliveryFee() {
         return BASE_FEE + getWeightKg() * RATE_PER_KG;
     }
 
