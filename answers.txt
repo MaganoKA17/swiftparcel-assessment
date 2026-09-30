@@ -3,6 +3,17 @@ DO NOT CHANGE THE FORMAT -- DO NOT CREATE A NEW txt file
 === Question 1.1 (4 marks) ===
 #Answer below
 
+Waterfall model is a delivery model where implementation is done in a linear format, where each stage has to be
+signed off before proceed in to the next stage
+
+Agile delivery is a delivery model where each stage is based and has a based duration from one to four weeks with a specified deadline
+
+Main difference between waterfall and agile is that agile gives developers much more direction towards compalting
+a stage and gives them more breathing room to implement last minute changes.
+
+How moving from their current model to the current one, is that each team member will be awaree of the deadline, give them
+time to implement any overlooked changes, and by extension changes
+
 
 === Question 1.2 (4 marks) ===
 #Columns, left to right, with a one-line meaning each:
