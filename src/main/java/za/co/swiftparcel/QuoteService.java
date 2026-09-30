@@ -43,11 +43,33 @@ public class QuoteService {
         return surcharge;
     }
 
+    public double calculateParcelFragileSurchange(Parcel parcel, double surchange){
+         if (parcel.getDeclaredValue() > 5000) {
+             return surcharge = 150;
+        } else {
+           return surcharge = 60;
+        }
+    }
+
     public boolean canAccept(Parcel parcel, Depot depot) {
-        if (depot.isOpen() == true && depot.getSpacesRemaining() > 0 && parcel.getWeightKg() <= depot.getMaxWeightKg() && (parcel.isFragile() == false || depot.acceptsFragile() == true) && (depot.getZone() == null || depot.getZone() == parcel.getZone())) {
+        if (depot.isOpen() == true && parcelWeightCheckAgainstDepotSpaces(parcel, depot) && (depotFragileStatus(parcel, depot) && depotAndParcelZone(parcel, depot))) {
             return true;
         } else {
             return false;
         }
     }
+
+    public boolean depotFragileStatus(Parcel parcel, Depot depot){
+        return (parcel.isFragile() == false || depot.acceptsFragile() == true);
+    }
+
+    public boolean depotAndParcelZone(Parcel parcel, Depot depot){
+        return (depot.getZone() == null || depot.getZone() == parcel.getZone());
+    }
+
+    public boolean parcelWeightCheckAgainstDepotSpaces(Parcel parcel, Depot depot){
+        return depot.getSpacesRemaining() > 0 && parcel.getWeightKg() <= depot.getMaxWeightKg();
+    }
+
+
 }

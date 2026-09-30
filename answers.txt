@@ -8,10 +8,10 @@ signed off before proceed in to the next stage
 
 Agile delivery is a delivery model where each stage is based and has a based duration from one to four weeks with a specified deadline
 
-Main difference between waterfall and agile is that agile gives developers much more direction towards compalting
+Main difference between waterfall and agile is that agile gives developers much more direction towards completing
 a stage and gives them more breathing room to implement last minute changes.
 
-How moving from their current model to the current one, is that each team member will be awaree of the deadline, give them
+How moving from their current model to the current one, is that each team member will be aware of the deadline, give them
 time to implement any overlooked changes, and by extension changes
 
 
@@ -37,14 +37,31 @@ time to implement any overlooked changes, and by extension changes
 === Question 2.1 (4 marks) ===
 #Answer below
 
+Brownfield development is defined as a form of software engineering which deals with an already existing codebase,
+mainly on legacy systems. The developer has to fully understand the code and the relevant tools before refactoring can
+take place
+
+Greenfield development is development where a repository is built from scratch, allowing more freedom to choose the tools
+and libraries to implement
+
+Greenfield deals with creating a project from scratch, brownfield deals with an existing codebase
+
+I would look through the codebase, and see what tools are used and why and also break the code to see its underlying
+functionality
+
 
 === Question 2.2.1 (6 marks per method) ===
 #Method 1 (class and method name):
 #Problem and why it matters:
 
+The first problematic method is the canAccept method, inside the QuoteService class. The reason why it is problematic
+is that the line of code is too long and complicated to read, making code maintenance needlessly difficult.
+
 #Method 2 (class and method name):
 #Problem and why it matters:
 
+The calculateSurchange method in the QuoteService class is the second problematic method. The reason is the nested \
+conditional statements, which makes the code messy and complicated to debug.
 
 === Question 2.2.3 (justification, 3 to 5 sentences per method) ===
 #Method 1:
